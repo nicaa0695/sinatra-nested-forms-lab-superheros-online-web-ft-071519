@@ -1,14 +1,13 @@
-<body>
-  <form method= "post" action = "/">
-    <h1>"Create a Team and Heroes!"</h1>
-    <ul>
-      <li><label>Team Name: <%= @name %></label></li>
-      <li><label>Team Motto: <%= @motto %></label></li>
-    </ul>
-    <input type= "submit" value= "Submit"/>
-  </form>
-</body>
+<h1><%= @team.name %></h1>
 
 
+ <h2>Team Motto: <%= @team.motto %></h2>
+
+  <% @heroes.each do |super_hero| %>
+<h2>Hero Name: <%= super_hero.name %></h2>
+<p>Hero Power: <%= super_hero.power %></p>
+<p>Hero Biography: <%=super_hero.bio %></p>
+
+ <% end %> 
 
 
